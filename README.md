@@ -3,12 +3,14 @@ select2entity-bundle
 
 ## Introduction
 
-This is a Symfony2 bundle which enables the popular [Select2](https://select2.github.io) component to be used as a drop-in replacement for a standard entity field on a Symfony form.
+This is a Symfony bundle which enables the popular [Select2](https://select2.github.io) component to be used as a drop-in replacement for a standard entity field on a Symfony form.
 
 The main feature that this bundle provides compared with the standard Symfony entity field (rendered with a html select) is that the list is retrieved via a remote ajax call. This means that the list can be of almost unlimited size. The only limitation is the performance of the database query or whatever that retrieves the data in the remote web service.
 
 It works with both single and multiple selections. If the form is editing a Symfony entity then these modes correspond with many to one and many to many relationships. In multiple mode, most people find the Select2 user interface easier to use than a standard select tag with multiple=true with involves awkward use of the ctrl key etc.
 
+This project was forked from [tetranz/select2entity-bundle](https://github.com/tetranz/select2entity-bundle), with one modification to be used on Adenasoft's projects with Symfony 4.
+ 
 The project was inspired by [lifo/typeahead-bundle](https://github.com/lifo101/typeahead-bundle) which uses the Typeahead component in Bootstrap 2 to provide similar functionality. Select2Entity can be used anywhere Select2 can be installed, including Bootstrap 3.
 
 Thanks to @ismailbaskin we now have Select2 version 4 compatibility.
@@ -35,14 +37,14 @@ These files live in the Resources/public/js and Resources/public/css folders of 
 
 Alternatively, minified versions of select2.js and select2.css can be loaded from the CloudFlare CDN using the two lines of code given here: [https://select2.github.io](https://select2.github.io). Make sure the script tag comes after where jQuery is loaded. That might be in the page footer.
 
-* Add `tetranz/select2entity-bundle` to your projects `composer.json` "requires" section:
+* Add `adena/select2entity-bundle` to your projects `composer.json` "requires" section:
 
 ```javascript
 {
     // ...
     "require": {
         // ...
-        "tetranz/select2entity-bundle": "2.*"
+        "adena/select2entity-bundle": "dev-master"
     }
 }
 ```
@@ -54,7 +56,7 @@ Note that this only works with Select2 version 4. If you are using Select2 versi
 ```php
 $bundles = array(
     // ...
-    new Tetranz\Select2EntityBundle\TetranzSelect2EntityBundle(),
+    new Adena\Select2EntityBundle\TetranzSelect2EntityBundle(),
 );
 ```
 
