@@ -1,5 +1,5 @@
 {
-    "name": "lorranpego/select2entity-bundle",
+    "name": "adena/select2entity-bundle",
     "type": "symfony-bundle",
     "description": "A Symfony2 bundle that integrates Select2 as a drop-in replacement for a standard entity field on a Symfony form.",
     "keywords": ["symfony","select2", "typeahead","autocomplete"],
